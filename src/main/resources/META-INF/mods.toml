@@ -1,0 +1,36 @@
+modLoader="javafml" #mandatory
+loaderVersion="${loader_version_range}" 
+license="${mod_license}"
+
+[[mods]] 
+
+modId="bettersword" 
+
+version="1" 
+
+displayName="Better Sword Mod" 
+
+authors="TimeSaeking" 
+
+description='''${mod_description}'''
+
+[[dependencies.bettersword]] 
+  
+    modId="forge" 
+    
+    mandatory=true
+    
+    versionRange="${forge_version_range}" 
+   
+    ordering="NONE"
+   
+    side="BOTH"
+
+[[dependencies.bettersword]]
+    modId="minecraft"
+    mandatory=true
+    
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
