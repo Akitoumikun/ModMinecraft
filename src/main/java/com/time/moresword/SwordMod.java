@@ -1,6 +1,7 @@
 package com.time.moresword;
 
 import com.mojang.logging.LogUtils;
+import com.time.moresword.core.init.BlockInit;
 import com.time.moresword.core.init.ItemInit;
 import com.time.moresword.core.init.ModCreativeModTabs;
 
@@ -17,7 +18,7 @@ import org.slf4j.Logger;
 @Mod(SwordMod.MODID)
 public class SwordMod {
     public static final Logger LOGGER = LogUtils.getLogger();
-    public static final String MODID = "bettersword";
+    public static final String MODID = "moresword";
 
     public SwordMod() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -25,8 +26,12 @@ public class SwordMod {
         modEventBus.addListener(this::setup);
         
         ItemInit.register(modEventBus);
+        
+        BlockInit.register(modEventBus);
        
         ModCreativeModTabs.register(modEventBus);
+        
+        
       
         
         modEventBus.addListener(this::addCreative);

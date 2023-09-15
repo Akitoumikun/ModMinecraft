@@ -1,0 +1,22 @@
+{
+  "item.moresword.sapphire": "Sapphire",
+  "item.moresword.raw_sapphire": "Raw Sapphire",
+
+  "block.moresword.sapphire_block": "Block of Sapphire",
+  "block.moresword.raw_sapphire_block": "Block of Raw Sapphire",
+  "block.moresword.sapphire_ore": "Sapphire Ore",
+  
+  "item.moresword.sapphire_sword": "Sapphire Sword",
+  "item.moresword.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.moresword.sapphire_axe": "Sapphire Axe",
+  "item.moresword.sapphire_shovel": "Sapphire Shovel",
+  "item.moresword.sapphire_hoe": "Sapphire Hoe",
+
+  "item.moresword.sapphire_helmet": "Sapphire Helmet",
+  "item.moresword.sapphire_chestplate": "Sapphire Chestplate",
+  "item.moresword.sapphire_leggings": "Sapphire Leggings",
+  "item.moresword.sapphire_boots": "Sapphire Boots",
+  "block.moresword.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+
+  "creativetab.moresword": "Sapphire Tab"
+}

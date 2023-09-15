@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "moresword:sapphire_block"
+    }
+  ],
+  "result": {
+    "item": "moresword:sapphire",
+    "count": 9
+  }
+}

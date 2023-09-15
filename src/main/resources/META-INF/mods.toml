@@ -4,7 +4,7 @@ license="${mod_license}"
 
 [[mods]] 
 
-modId="bettersword" 
+modId="moresword" 
 
 version="1" 
 
@@ -14,7 +14,7 @@ authors="TimeSaeking"
 
 description='''${mod_description}'''
 
-[[dependencies.bettersword]] 
+[[dependencies.moresword]] 
   
     modId="forge" 
     
@@ -26,7 +26,7 @@ description='''${mod_description}'''
    
     side="BOTH"
 
-[[dependencies.bettersword]]
+[[dependencies.moresword]]
     modId="minecraft"
     mandatory=true
     
