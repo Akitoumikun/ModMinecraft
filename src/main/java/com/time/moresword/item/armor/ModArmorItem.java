@@ -5,6 +5,7 @@ import com.time.moresword.common.material.ModArmorMaterial;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
@@ -16,11 +17,11 @@ import java.util.Map;
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterial.SAPPHIRE, new MobEffectInstance(MobEffects.REGENERATION, 200, 1,
-                    		true,true, true)).build();
+                    .put(ModArmorMaterial.SAPPHIRE,
+                            new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 1)).build();
 
-    public ModArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
-        super(pMaterial, pType, pProperties);
+    public ModArmorItem(ArmorMaterial material, Type slot, Properties settings) {
+        super(material, slot, settings);
     }
 
     @Override
@@ -48,7 +49,12 @@ public class ModArmorItem extends ArmorItem {
         boolean hasPlayerEffect = player.hasEffect(mapStatusEffect.getEffect());
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(mapStatusEffect));
+            player.addEffect(new MobEffectInstance(mapStatusEffect.getEffect(),
+                    mapStatusEffect.getDuration(), mapStatusEffect.getAmplifier()));
+
+            //if(new Random().nextFloat() > 0.6f) { // 40% of damaging the armor! Possibly!
+            //    player.getInventory().hurtArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
+            //}
         }
     }
 
@@ -63,12 +69,6 @@ public class ModArmorItem extends ArmorItem {
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, Player player) {
-        for (ItemStack armorStack : player.getInventory().armor) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
-                return false;
-            }
-        }
-
         ArmorItem boots = ((ArmorItem)player.getInventory().getArmor(0).getItem());
         ArmorItem leggings = ((ArmorItem)player.getInventory().getArmor(1).getItem());
         ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmor(2).getItem());

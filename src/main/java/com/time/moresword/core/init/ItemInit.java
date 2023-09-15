@@ -3,6 +3,7 @@ package com.time.moresword.core.init;
 import com.time.moresword.SwordMod;
 import com.time.moresword.common.material.ModArmorMaterial;
 import com.time.moresword.common.material.ModItemTier;
+import com.time.moresword.item.sword.CobaltSword;
 
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
@@ -10,7 +11,6 @@ import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
-import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,7 +26,10 @@ public class ItemInit {
             () -> new Item(new Item.Properties()));
     
     public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
-            () -> new SwordItem(ModItemTier.SAPPHIRE, 4, 2, new Item.Properties()));
+            () -> new CobaltSword(ModItemTier.SAPPHIRE, 4, -2.4F, new Item.Properties()));
+    
+    public static final RegistryObject<Item> LIGHTNING_SWORD = ITEMS.register("lightning_sword",
+            () -> new CobaltSword(ModItemTier.SAPPHIRE, 4, -2.4F, new Item.Properties()));
     
     public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe",
             () -> new PickaxeItem(ModItemTier.SAPPHIRE, 1, 1, new Item.Properties()));

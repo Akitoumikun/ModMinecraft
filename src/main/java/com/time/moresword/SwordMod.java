@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.time.moresword.core.init.BlockInit;
 import com.time.moresword.core.init.ItemInit;
 import com.time.moresword.core.init.ModCreativeModTabs;
+import com.time.moresword.enchantment.ModEnchantments;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -28,6 +29,8 @@ public class SwordMod {
         ItemInit.register(modEventBus);
         
         BlockInit.register(modEventBus);
+        
+        ModEnchantments.register(modEventBus);
        
         ModCreativeModTabs.register(modEventBus);
         

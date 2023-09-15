@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import com.time.moresword.SwordMod;
+import com.time.moresword.enchantment.ModEnchantments;
 
 
 public class ModCreativeModTabs {
@@ -37,6 +38,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ItemInit.SAPPHIRE_BOOTS.get());
                         pOutput.accept(BlockInit.DEEPSLATE_SAPPHIRE_ORE.get());
                         
+                        pOutput.accept(ItemInit.LIGHTNING_SWORD.get());
                         
                     })
                     .build());

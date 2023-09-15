@@ -7,6 +7,7 @@
   "block.moresword.sapphire_ore": "Sapphire Ore",
   
   "item.moresword.sapphire_sword": "Sapphire Sword",
+  "item.moresword.lightning_sword": "Lightining Sword",
   "item.moresword.sapphire_pickaxe": "Sapphire Pickaxe",
   "item.moresword.sapphire_axe": "Sapphire Axe",
   "item.moresword.sapphire_shovel": "Sapphire Shovel",
@@ -17,6 +18,8 @@
   "item.moresword.sapphire_leggings": "Sapphire Leggings",
   "item.moresword.sapphire_boots": "Sapphire Boots",
   "block.moresword.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  
+  "enchantment.moresword.voltaic_revolt": "Voltaic Revolt",
 
   "creativetab.moresword": "Sapphire Tab"
 }

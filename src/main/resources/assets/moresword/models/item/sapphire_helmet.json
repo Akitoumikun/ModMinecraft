@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "moresword:item/amethyst_helmet"
+    "layer0": "moresword:item/sapphire_helmet"
   }
 }
